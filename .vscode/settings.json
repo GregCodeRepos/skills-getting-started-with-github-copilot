@@ -1,0 +1,30 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python3 - <<'PY'\nfrom pathlib import Path\nsource = Path\\(\"src/static/app\\.js\"\\)\\.read_text\\(\\)\nassert 'method: \"DELETE\"' in source\nassert 'activitiesList\\.addEventListener\\(\"click\"' in source\nassert source\\.index\\('activitiesList\\.addEventListener\\(\"click\"'\\) > source\\.index\\('async function fetchActivities'\\)\ncss = Path\\(\"src/static/styles\\.css\"\\)\\.read_text\\(\\)\nassert \"list-style: none\" in css\nassert \"\\.participant-remove\" in css\nprint\\(\"Frontend unregister wiring and bullet styling checks passed\"\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python3 - <<'PY'\nfrom pathlib import Path\nsource = Path\\(\"src/static/app\\.js\"\\)\\.read_text\\(\\)\nsuccess_branch = source\\[source\\.index\\('if \\(response\\.ok\\) \\{'\\):source\\.index\\('\\} else \\{', source\\.index\\('if \\(response\\.ok\\) \\{'\\)\\)\\]\nassert 'await fetchActivities\\(\\);' in success_branch\nprint\\(\"Signup success refresh check passed\"\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^python3 -m pytest -q tests/test_app\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/usr/local/bin/python": true,
+        "python3.13": true,
+        "/^python3 -m py_compile tests/test_app\\.py src/app\\.py$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "pytest": true,
+        "true": true,
+        ".venv/bin/pytest": true
+    },
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
